@@ -126,7 +126,7 @@ def plot_sentiment_distribution(df_data, file_name, title):
         plt.close()
 
 def main():
-    print("🚀 作品別 感情分析を開始します...")
+    print("作品別 感情分析を開始します...")
 
     if not os.path.exists('results'):
         os.makedirs('results')
@@ -143,7 +143,7 @@ def main():
         
         df = force_read_csv(path)
         if df is None or review_col not in df.columns:
-            print(f"🚨 エラー: {title}のファイル読み込みまたは列名'{review_col}'の確認に失敗しました。スキップします。")
+            print(f"エラー: {title}のファイル読み込みまたは列名'{review_col}'の確認に失敗しました。スキップします。")
             continue
 
         df_game = df.copy()
